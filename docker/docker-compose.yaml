@@ -5,8 +5,8 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: pwa-covid19
-    image: aryangomes/react-js-pwa-covid19:1.0.0
+    container_name: node-gerador-de-fichas
+    image: aryangomes/node-gerador-de-fichas:1.0.0
     ports:
       - '3000:3000'
     volumes:
