@@ -85,7 +85,7 @@
                   <q-input
                     v-model.number="configuracoes.tamanhoTexto"
                     type="number"
-                    label="Espessura da borda"
+                    label="Tamanho do Texto"
                     style="max-width: 200px"
                     suffix="cms"
                     step="0.1"
@@ -145,6 +145,7 @@
           </Ficha>
 
           <Ficha
+            :configuracoes="configuracoes"
             :texto="textoParaExibirNaFicha"
             v-if="imprimirTextoNaFicha"
           >
@@ -231,8 +232,6 @@ section {
   #area-para-impressao {
     left: 0;
     top: 0;
-    margin-top: 0.5cm;
-    margin-left: 0.5cm;
   }
 }
 </style>
