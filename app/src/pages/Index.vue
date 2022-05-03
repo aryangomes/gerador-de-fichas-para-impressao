@@ -1,5 +1,6 @@
 <template>
   <div>
+
     <GeradorDeFichas> </GeradorDeFichas>
   </div>
 </template>
@@ -15,15 +16,5 @@ export default {
 * {
   margin: 0;
   padding: 0;
-}
-@media print {
-  @page {
-    margin: 0;
-    size: A4 portrait;
-  }
-  body {
-    margin-top:0.5cm ;
-    margin-left:1cm ;
-  }
 }
 </style>

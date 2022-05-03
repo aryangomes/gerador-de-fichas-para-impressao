@@ -1,8 +1,9 @@
 <template>
-  <div class="ficha" :style="style">
-    <p class="text-center text-weight-bolder" style="font-size: 2cm;">
-      {{ texto }}
-    </p>
+  <div
+    class="ficha text-center text-weight-bolder"
+    :style="estiloDaFicha"
+  >
+    {{ texto }}
   </div>
 </template>
 
@@ -10,25 +11,35 @@
 export default {
   name: "Ficha",
   data() {
-    return {
-      alturaFicha: 4,
-      larguraFicha: 4,
-      espessuraBorda: 3,
-    };
+    return {};
   },
   props: {
     texto: {
-      default: "Ficha",
+      type: String,
+      default: function () {
+        return "Ficha";
+      },
+    },
+    configuracoes: {
+      default: function () {
+        return {
+          tamanhoFicha: 4,
+          espessuraBorda: 0.15,
+          alturaTexto: 3,
+          tamanhoTexto: 1,
+        };
+      },
     },
   },
 
   computed: {
-    style() {
+    estiloDaFicha() {
       return (
-        `height: ${this.alturaFicha}cm;` +
-        `width:  ${this.larguraFicha}cm;` +
-        `border: ${this.espessuraBorda}px solid black;` +
-        `line-height:${this.alturaFicha}cm`
+        `height: ${this.configuracoes.tamanhoFicha}cm;` +
+        `width:  ${this.configuracoes.tamanhoFicha}cm;` +
+        `font-size: ${this.configuracoes.tamanhoTexto}cm;` +
+        `border: ${this.configuracoes.espessuraBorda}cm solid black;` +
+        `line-height:${this.configuracoes.alturaTexto}cm`
       );
     },
   },
@@ -36,7 +47,11 @@ export default {
 </script>
 
 <style>
-.ficha{
-  margin: 0.01cm;
+.ficha {
+  word-wrap: break-word;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
 }
 </style>
