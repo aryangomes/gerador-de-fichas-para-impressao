@@ -5,8 +5,8 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: node-gerador-de-fichas
-    image: aryangomes/node-gerador-de-fichas:1.0.0
+    container_name: node-gerador-de-fichas-para-impressao
+    image: aryangomes/node-gerador-de-fichas-para-impressao:1.0.0
     ports:
       - '3000:3000'
     volumes:

@@ -1,8 +1,8 @@
 {
-  "name": "gerador-de-fichas",
+  "name": "gerador-de-fichas-para-impressao",
   "version": "0.0.1",
   "description": "A Quasar Project",
-  "productName": "Gerador de Fichas",
+  "productName": "Gerador de Fichas Para Impressão",
   "author": "",
   "private": true,
   "scripts": {
